@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene1｜練團室的微光</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f9f9f9;
+      padding: 2em;
+      line-height: 1.8;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+    .dialogue {
+      margin-bottom: 1.5em;
+    }
+    .choice {
+      margin: 1em 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .choice button {
+      margin: 0.3em 0;
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #e0f2fe;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .choice button:hover {
+      background-color: #bae6fd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scene-title">
+      # Scene1｜練團室的微光
+    </div>
+
+    <div class="dialogue">
+      <p>白色的窗簾半掩著，風從窗縫灑進練團室，譜頁翻動的聲音，在空教室裡顯得格外清晰。</p>
+      <p>他坐在窗邊，吉他輕輕彈奏，歌聲低緩而溫柔，彷彿是為誰獨自唱著記憶的片段。</p>
+      <p>你站在門邊，一時間沒有開口。陽光落在他肩頭的輪廓，也落在你心上。</p>
+
+      <p>他的聲音停下來，轉過頭，露出熟悉的笑容。</p>
+
+      <p><strong>純喜：</strong><br>
+      「啊，被你抓到了！」<br>
+      「說好午休要睡覺的，結果我還是跑來練團室…」<br>
+      「不過你來真好，讓我有種練到一半的小確幸。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A. 你總是這樣啊，明明累卻還是撐著笑。</button>
+      <button onclick="next()">B. 你在的地方，好像從來都不會安靜。</button>
+      <button onclick="next()">C. 我原本就猜你會在這裡。</button>
+      <button onclick="next()">D. 來看你一下，不然我會放心不下。</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'junkiscene2.html';
+    }
+  </script>
+</body>
+</html>

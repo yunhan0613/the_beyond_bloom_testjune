@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene2｜耳機的另一端</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('syoyascene2.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.8) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #cbb6e3;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #cbb6e3;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #b7a8d6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="syoya_avatar.jpg" alt="Syoya" class="avatar">
+
+    <div class="scene-title">
+      # Scene2｜耳機的另一端
+    </div>
+
+    <div class="dialogue">
+      <p>他沒有生氣，甚至沒急著把耳機拿回去，只是蹲下來看你。</p>
+
+      <p><strong>祥也：</strong><br>
+      「你聽到了啊……那首，是我亂寫的。」<br>
+      「沒有詞，也沒旋律，就是錄來玩玩而已。」</p>
+
+      <p>他語氣一如往常地輕，沒有表情上的多餘波動，但你聽得出來——他有一點不自在。</p>
+
+      <p><strong>祥也：</strong><br>
+      「只是最近 Bass 練得有點卡，總覺得，某些聲音配不上心裡那段畫面。」</p>
+
+      <p>他伸手拿回耳機時，手指觸到你掌心的一角，頓了一下，卻沒收回。</p>
+
+      <p><strong>祥也：</strong><br>
+      「……你覺得，剛剛那段，會不會太安靜了？」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「我覺得安靜得很剛好」</button>
+      <button onclick="next()">B.「每段旋律裡的留白，我想都是有必要的」</button>
+      <button onclick="next()">C.「如果少了那一段，反而感覺差了一點什麼」</button>
+      <button onclick="next()">D.「不會啊，很適合在黃昏放出來聽。」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'syoyascene3.html';
+    }
+  </script>
+</body>
+</html>

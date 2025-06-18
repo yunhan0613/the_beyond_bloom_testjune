@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene3｜他沒說的話</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('syoyascene3.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.85) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #cbb6e3;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #cbb6e3;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #b7a8d6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="syoya_avatar.jpg" alt="Syoya" class="avatar">
+
+    <div class="scene-title">
+      # Scene3｜他沒說的話
+    </div>
+
+    <div class="dialogue">
+      <p>你們在樓梯間沉默了幾分鐘，沒有離開。</p>
+
+      <p>他把播放器遞過來，讓你戴上耳機，自己也戴了一邊。</p>
+
+      <p>一段新錄的旋律響起，比剛才的更完整，低頻鋪在背景，像某種包圍感。</p>
+
+      <p>他沒有看你，只盯著播放器上的波形。聲音結束時，他輕聲說：</p>
+
+      <p><strong>祥也：</strong><br>
+      「這一段……其實是昨天夢裡的東西。我醒來後馬上記下來了。」</p>
+
+      <p>「寫著寫著，才發現這段旋律，像是為了誰而存在。」</p>
+
+      <p>他終於轉過頭看你，眼神像樂譜空白處寫下的休止符，<br>
+      什麼都沒說，卻什麼都已經在那裡。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「難怪聽著很溫柔呢，像你一樣」</button>
+      <button onclick="next()">B.「所以它也蠻聰明地找到主人了」</button>
+      <button onclick="next()">C.「歌曲就像故事，總會需要一對主角」</button>
+      <button onclick="next()">D.「我也從裡面找到了你」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'syoyascene4.html';
+    }
+  </script>
+</body>
+</html>

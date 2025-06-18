@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene4｜播放鍵沒按下</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('syoyascene4.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.8) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #cbb6e3;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .confession {
+      margin-top: 2em;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #555;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="syoya_avatar.jpg" alt="Syoya" class="avatar">
+
+    <div class="scene-title">
+      # Scene4｜播放鍵沒按下
+    </div>
+
+    <div class="dialogue">
+      <p>耳機流淌著的樂音終於結束，一陣沉默在兩人之間游走，夕陽西下，歲月靜好。</p>
+
+      <p>彼此只是在樓梯間靜靜坐著，天光像水一樣灑進來，照在他手背的地方。</p>
+
+      <p><strong>祥也：</strong><br>
+      「這首歌……我本來沒打算給任何人聽的。」</p>
+
+      <p>他像是自言自語，又像是在確認什麼。</p>
+
+      <p><strong>祥也：</strong><br>
+      「我不是那種會寫歌告白的人，這樣很老派。也不夠厲害。」<br>
+      「但如果你真的聽懂了，我就……不把它刪掉了。」</p>
+
+      <p>他沒有再說更多，只是輕輕敲了兩下播放器的背蓋，把它收進口袋。</p>
+
+      <p><strong>祥也：</strong><br>
+      「你剛剛聽到的那段低音，是從我看到你背影的時候開始寫的。」<br>
+      「然後你回頭的那瞬間，我才找到這首歌的結尾。」</p>
+
+      <p class="confession" id="confessionText"></p>
+    </div>
+
+    <script>
+      const endings = [
+        "「我不擅長開口，所以寫了這首歌。如果你聽完還想留下來，那就……別按停止鍵，好嗎？」",
+        "「我本來打算藏起來，但現在，只想讓你一個人聽見。」",
+        "「Bass 都是配角，只有在對的人面前，才敢變成旋律。」",
+        "「這不是一首歌，是我不敢說的話——但你一聽就懂了。」"
+      ];
+      const selected = Math.floor(Math.random() * endings.length);
+      document.getElementById("confessionText").textContent = endings[selected];
+    </script>
+  </div>
+</body>
+</html>

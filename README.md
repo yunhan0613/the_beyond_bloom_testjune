@@ -1,5 +1,5 @@
 # the_beyond_bloom_testjune
-# JO1互動故事測試版 六月篇
+# JO1互動故事測試版 六月版本
 
 包含四個場景頁面：
 - scene1.html：相遇與鋪陳

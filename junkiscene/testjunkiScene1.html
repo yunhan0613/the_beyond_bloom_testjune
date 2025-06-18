@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>test scroll｜Scene1 練團室的微光</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      position: relative;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('junkiScene1.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 1.2em;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #cce9ff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #cce9ff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #addbff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="junki_avatar.jpg" alt="Junki" class="avatar">
+
+    <div class="scene-title">
+      # Scene1｜練團室的微光
+    </div>
+
+    <div class="dialogue">
+      <p>白色的窗簾半掩著，風從窗縫灑進練團室，<br>譜頁翻動的聲音，在空教室裡顯得格外清晰。</p>
+      <p>他坐在窗邊，吉他輕輕彈奏，歌聲低緩而溫柔，<br>彷彿是為誰獨自唱著記憶的片段。</p>
+      <p>你站在門邊，一時間沒有開口。<br>陽光落在他肩頭的輪廓，也落在你心上。</p>
+      <p>他的聲音停下來，轉過頭，露出熟悉的笑容。</p>
+
+      <p><strong>純喜：</strong><br>
+      「啊，被你抓到了！」<br>
+      「說好午休要睡覺的，結果我還是跑來練團室...」<br>
+      「不過你來真好，讓我有種練到一半的小確幸。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「你總是這樣啊，明明累卻還是撐著笑。」</button>
+      <button onclick="next()">B.「你在的地方，好像從來都不會安靜。」</button>
+      <button onclick="next()">C.「我原本就猜你會在這裡。」</button>
+      <button onclick="next()">D.「來看你一下，不然我會放心不下。」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'junkiscene2.html';
+    }
+  </script>
+</body>
+</html>

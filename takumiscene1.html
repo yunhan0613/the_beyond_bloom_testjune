@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene1｜練習場邊，風起時</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f9f9f9;
+      padding: 2em;
+      line-height: 1.8;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+    .dialogue {
+      margin-bottom: 1.5em;
+    }
+    .choice {
+      margin: 1em 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .choice button {
+      margin: 0.3em 0;
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #FED1DC;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .choice button:hover {
+      background-color: #fbb6c9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scene-title">
+      🧢 Scene1｜練習場邊，風起時
+    </div>
+
+    <div class="dialogue">
+      <p>操場的燈光還沒熄。</p>
+      <p>灰藍的天色像被風抹開，草地間傳來規律的球聲，每一下都落在靜夜裡最靠近心臟的位置。</p>
+      <p>他站在投手丘上，眼神比白日更加聚焦。</p>
+      <p>夜練對他來說不是特別的事，但今晚的節奏似乎與平常不同——每一球都像有點遲疑，像是在等誰出現。</p>
+      <p>你沒刻意靠近，卻還是被他發現了。</p>
+      <p>他回頭看你，沒有驚訝，只有一點像鬆口氣的微笑。</p>
+      <p><strong>「妳來啦。」</strong><br>
+      他語氣低低的，像是早知道你會來。</p>
+      <p><strong>「這風好像變涼了……妳穿這樣，不會太冷嗎？」</strong></p>
+      <p>他走下丘，把自己的外套披在你肩上，動作不快，卻很確定。</p>
+      <p><strong>「如果妳感冒，我大概會練得心神不寧吧。」</strong></p>
+      <p>但你沒有立刻回話，只是靜靜看著他手上的球，彷彿仍聽得見剛才投出時那微弱的風聲。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A. 大概知道為什麼你是野球部部長了。</button>
+      <button onclick="next()">B. 比起冷，我好像更在意剛剛那顆球。</button>
+      <button onclick="next()">C. 我好像也有點心神不寧。</button>
+      <button onclick="next()">D. 你投得這麼認真，我也不好意思先開口了。</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'takumiscene2.html';
+    }
+  </script>
+</body>
+</html>

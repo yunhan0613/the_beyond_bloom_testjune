@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene4｜校園廣播告白</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      position: relative;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('rukiscene4.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .confession {
+      margin-top: 2em;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #1e3a8a;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="ruki_avatar.jpg" alt="Ruki" class="avatar">
+
+    <div class="scene-title">
+      # Scene4｜校園廣播告白
+    </div>
+
+    <div class="dialogue">
+      <p>放學鐘聲劃過午後，天色像剛被水彩洗過，柔和得不像真實。</p>
+      <p>你坐在空教室裡，天台的風、白襯衫的影子、還有他問出口的那一句，都還留在心裡。</p>
+      <p>正想著要不要回去找他，校內廣播忽然響起。</p>
+
+      <p>「……各位同學好，這裡是今天傍晚的校園廣播。」</p>
+
+      <p>DJ聲線沉穩低柔，卻在某個字音的尾端，讓你停下了筆。<br>那是你熟悉的聲音。只是他刻意壓低了語氣，像怕被誰認出來似的。</p>
+
+      <p>「今天沒有什麼特別的節目。只是，有一段話……想說給某個人聽。」</p>
+
+      <p>教室裡只剩你一個人，廣播裡的聲音卻像專門對你說。</p>
+
+      <p>「如果妳聽得見，應該會知道是我。」<br>
+         「我不太會說那種甜得讓人頭暈的話，也不想用模糊的比喻讓妳猜。」</p>
+
+      <p>聲音裡多了一點急促，像是鼓起勇氣後卻又猶豫了一秒。</p>
+
+      <p><strong>「我只想讓妳知道」</strong><br>
+         「我的名字、我的聲音、我的全部，在喜歡妳這件事上，是認真的。」</p>
+
+      <p>廣播聲靜默了幾秒。你聽見微弱的吸氣聲，像是他在等。</p>
+
+      <p class="confession" id="randomConfession"></p>
+    </div>
+
+    <script>
+      const endings = [
+        `瑠姬（廣播）\n「如果有什麼聲音能被風好好記住……」\n「我希望是我說的這句。」\n「——我喜歡妳。」`,
+        `瑠姬（廣播）\n「如果總要有個人先說，那就由我來。」\n「我喜歡妳。一直以來，只有妳讓我這麼在意。」`,
+        `瑠姬（廣播）\n「感情不是邏輯題，我早就知道答案了。」\n「——妳的名字，早就成為我唯一想提起的句子。」`,
+        `瑠姬（廣播）\n「就算妳沒聽見，沒發現，沒回答也沒關係。」\n「我喜歡妳。這件事是真的。」`
+      ];
+      const random = Math.floor(Math.random() * endings.length);
+      document.getElementById("randomConfession").textContent = endings[random];
+    </script>
+  </div>
+</body>
+</html>

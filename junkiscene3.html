@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene3｜藏在光裡的告白</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      position: relative;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('junkiscene3.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #cce9ff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #cce9ff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #addbff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="junki_avatar.jpg" alt="Junki" class="avatar">
+
+    <div class="scene-title">
+      # Scene3｜藏在光裡的告白
+    </div>
+
+    <div class="dialogue">
+      <p>下課鐘聲在走廊外響起，陽光越過窗框，靜靜照進你們之間。</p>
+      <p>他沒有馬上抬頭，只是把那段沉默拉長了一點，像是想把這瞬間藏進記憶深處。</p>
+      <p>你以為他會保持安靜，他卻低聲開口，語調平緩，像夜裡的遠光燈。</p>
+
+      <p><strong>純喜：</strong><br>
+      「妳知道我為什麼那麼努力嗎？」<br>
+      「因為我希望，妳只要一抬頭，就能看見我在那裡。」<br>
+      「就像我知道，妳一直都在。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「我沒有抬頭，只是…一直看著你而已。」</button>
+      <button onclick="next()">B.「有些人事物，我早就記一輩子了。」</button>
+      <button onclick="next()">C.「我不是因為你努力才看你，是因為你是你。」</button>
+      <button onclick="next()">D.「如果你累了，我也會走過去，讓你看到我。」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'junkiscene4.html';
+    }
+  </script>
+</body>
+</html>

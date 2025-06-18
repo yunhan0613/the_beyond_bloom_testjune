@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene2｜不小心變成了練團導覽</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      position: relative;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('junkiscene2.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #cce9ff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #addbff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scene-title">
+      # Scene2｜不小心變成了練團導覽
+    </div>
+
+    <div class="dialogue">
+      <p>你走進去，他馬上眼睛亮起來，像是抓到理由說話的人。</p>
+      <p>他拍拍旁邊的椅子，讓你坐下，然後開始一一介紹樂團的器材，每講一樣就笑一下，像個介紹自己珍藏玩具的孩子。</p>
+
+      <p><strong>純喜：</strong><br>
+      「這把吉他是我第一次比賽用的，有點走音，但我還是很愛它。」<br>
+      「那邊那個是前輩借我的效果器，我還不太會用。」</p>
+
+      <p>他邊講邊看你，像是期待你的每一個表情。直到你低聲說出那句話——</p>
+
+      <p><strong>你：</strong><br>
+      「你真的已經做得很好了。」</p>
+
+      <p>那一刻，他像是短暫被按了靜音鍵。笑容慢慢收起來。</p>
+      <p>接著，沒預警地，靠近你，把額頭輕輕倚在你肩上。</p>
+
+      <p><strong>純喜：</strong><br>
+      「唔……糟了，我剛剛可能…不小心充電完畢了。」<br>
+      「一下下就好，借我靠一下…然後我就能繼續裝沒事。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「你不說，我也能夠看得出來。」</button>
+      <button onclick="next()">B.「這樣靠著好像會變成一種習慣。」</button>
+      <button onclick="next()">C.「你是不是都這樣，讓人沒辦法拒絕你？」</button>
+      <button onclick="next()">D.「那就再靠一下，不急著回去。」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'junkiscene3.html';
+    }
+  </script>
+</body>
+</html>

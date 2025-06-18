@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎧 Scene3｜他沒說的話</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f9f9f9;
+      padding: 2em;
+      line-height: 1.8;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+    .dialogue {
+      margin-bottom: 1.5em;
+    }
+    .choice {
+      margin: 1em 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .choice button {
+      margin: 0.3em 0;
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #cbb6e3;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .choice button:hover {
+      background-color: #b89de3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scene-title">
+      🎧 Scene3｜他沒說的話
+    </div>
+
+    <div class="dialogue">
+      <p>你們在樓梯間沉默了幾分鐘，沒有離開。</p>
+      <p>他把播放器遞過來，讓你戴上耳機，自己也戴了一邊。</p>
+      <p>一段新錄的旋律響起，比剛才的更完整，低頻鋪在背景，像某種包圍感。</p>
+      <p>他沒有看你，只盯著播放器上的波形。聲音結束時，他輕聲說：</p>
+      <p><strong>「這一段……其實是昨天夢裡的東西。我醒來後馬上記下來了。」</strong></p>
+      <p><strong>「寫著寫著，才發現這段旋律，像是為了誰而存在」</strong></p>
+      <p>他終於轉過頭看你，眼神像樂譜空白處寫下的休止符，什麼都沒說，卻什麼都已經在那裡。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A. 難怪聽著很溫柔呢，像你一樣</button>
+      <button onclick="next()">B. 所以它也蠻聰明地找到主人了</button>
+      <button onclick="next()">C. 歌曲就像故事，總會需要一對主角</button>
+      <button onclick="next()">D. 我也從裡面找到了你</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'syoyascene4.html';
+    }
+  </script>
+</body>
+</html>

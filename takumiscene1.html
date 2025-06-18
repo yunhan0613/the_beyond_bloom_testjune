@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene1｜練習場邊，風起時</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('takumiscene1.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #FED1DC;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #FED1DC;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #fcbfcf;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="takumi_avatar.jpg" alt="Takumi" class="avatar">
+
+    <div class="scene-title">
+      # Scene1｜練習場邊，風起時
+    </div>
+
+    <div class="dialogue">
+      <p>操場的燈光還沒熄。<br>
+      灰藍的天色像被風抹開，草地間傳來規律的球聲，每一下都落在靜夜裡最靠近心臟的位置。</p>
+
+      <p>他站在投手丘上，眼神比白日更加聚焦。<br>
+      夜練對他來說不是特別的事，但今晚的節奏似乎與平常不同——<br>
+      每一球都像有點遲疑，像是在等誰出現。</p>
+
+      <p>你沒刻意靠近，卻還是被他發現了。<br>
+      他回頭看你，沒有驚訝，只有一點像鬆口氣的微笑。</p>
+
+      <p><strong>拓實：</strong><br>
+      「妳來啦。」</p>
+      <p>他語氣低低的，像是早知道你會來。</p>
+
+      <p><strong>拓實：</strong><br>
+      「這風好像變涼了……妳穿這樣，不會太冷嗎？」</p>
+
+      <p>他走下丘，把自己的外套披在你肩上，動作不快，卻很確定。</p>
+
+      <p><strong>拓實：</strong><br>
+      「如果妳感冒，我大概會練得心神不寧吧。」</p>
+
+      <p>但你沒有立刻回話，只是靜靜看著他手上的球，彷彿仍聽得見剛才投出時那微弱的風聲。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「大概知道為什麼你是野球部部長了。」</button>
+      <button onclick="next()">B.「比起冷，我好像更在意剛剛那顆球。」</button>
+      <button onclick="next()">C.「我好像也有點心神不寧。」</button>
+      <button onclick="next()">D.「你投得這麼認真，我也不好意思先開口了。」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'takumiscene2.html';
+    }
+  </script>
+</body>
+</html>

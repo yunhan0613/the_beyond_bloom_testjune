@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene3｜投手的偏差與心跳</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('takumiscene3.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #FED1DC;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #FED1DC;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #fcbfcf;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="takumi_avatar.jpg" alt="Takumi" class="avatar">
+
+    <div class="scene-title">
+      # Scene3｜投手的偏差與心跳
+    </div>
+
+    <div class="dialogue">
+      <p>那一球，偏了。<br>
+      不是明顯失誤，卻落得不夠沉、不夠穩，像被某個瞬間的心念拖了方向。</p>
+
+      <p>他沒立刻撿起那顆球，只是蹲在原地，低頭沉了幾秒。<br>
+      你看見他呼出一口白氣，掌心在膝上慢慢收緊。</p>
+
+      <p>等他站起身時，他看向你，眼裡沒責怪，只是一點點……羞澀。</p>
+
+      <p><strong>拓實：</strong><br>
+      「剛才那球，可能是……看太久了。」</p>
+
+      <p>語氣很輕，他沒說「妳」，卻不需要再補充。</p>
+
+      <p>他走近，手套搭在肩上，腳步沒以前那麼穩，像是全身的節奏都還卡在剛才那一眼。</p>
+
+      <p><strong>拓實：</strong><br>
+      「明天的比賽，我會比今天更專心……只是今晚，好像沒辦法克制。」</p>
+
+      <p>他停下來，站在你身旁，側頭望向場邊燈光的方向，像說給風聽，也像是，留給你選擇回答的空隙。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「你停下來的那一秒，比飛出去的球還更讓人記得。」</button>
+      <button onclick="next()">B.「你剛剛那球，像是在試探觀眾不是敵隊。」</button>
+      <button onclick="next()">C.「連球都偏了，那我是不是，也算是有點厲害？」</button>
+      <button onclick="next()">D.「……那你現在，還想再練一球嗎？」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'takumiscene4.html';
+    }
+  </script>
+</body>
+</html>

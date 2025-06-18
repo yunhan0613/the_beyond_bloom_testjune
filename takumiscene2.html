@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene2｜靜默的便當</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('takumiscene2.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #FED1DC;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #FED1DC;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #fcbfcf;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="takumi_avatar.jpg" alt="Takumi" class="avatar">
+
+    <div class="scene-title">
+      # Scene2｜靜默的便當
+    </div>
+
+    <div class="dialogue">
+      <p>觀眾席上，風稍微大了一點。你遞出便當時，他沒立刻接，只先看了你一眼。<br>
+      像是問：「真的給我？」</p>
+
+      <p>你只是簡單點點頭，心理的忐忑此時卻怕得被他聽見。</p>
+
+      <p>他終究還是接了過去，眼神像看什麼容易碎的東西，慢慢打開。</p>
+
+      <p><strong>拓實：</strong><br>
+      「還是你做的啊。」</p>
+      <p>他嗅了嗅，像確認一樣。<br>
+      「連這種天氣會不會變味都考慮到了……真不像只是順便。」</p>
+
+      <p>他一口口吃得很慢，最後咬住玉子燒時，眉頭微皺。</p>
+
+      <p><strong>拓實：</strong><br>
+      「……這個味道有點像，上次我們在便利店吃的那一種。你記得嗎？」<br>
+      「那天雨下很大，我沒帶傘，你還——」</p>
+
+      <p>他話沒說完，卻笑了，低下頭繼續吃。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「味道會記住某些時候吧……就像人會記住一些雨。」</button>
+      <button onclick="next()">B.「我只是想到你應該又沒吃飯。」</button>
+      <button onclick="next()">C.「那天太濕了，都不好吃了。」</button>
+      <button onclick="next()">D.「我沒多想，但味道好像……真的有點像。」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'takumiscene3.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene3｜午後三點的試探</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f9f9f9;
+      padding: 2em;
+      line-height: 1.8;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+    .dialogue {
+      margin-bottom: 1.5em;
+    }
+    .choice {
+      margin: 1em 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .choice button {
+      margin: 0.3em 0;
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #e0f2fe;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .choice button:hover {
+      background-color: #bae6fd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scene-title">
+      # Scene3｜午後三點的試探
+    </div>
+
+    <div class="dialogue">
+      <p>下午三點，陽光繞過天台欄杆，落在他白襯衫的袖口上。</p>
+      <p>風靜靜吹過，他坐在圍牆邊，望著天色的轉折，像是在等某個從沒說出口的預感。</p>
+      <p>金色的髮絲在逆光裡微微發亮，側臉輪廓冷靜、乾淨，眼神卻有一種安靜的執著。</p>
+      <p>他沒有刻意靠近，卻像用整個天空拉近了距離。</p>
+
+      <p><strong>瑠姬：</strong><br>
+      「小時候，我以為只要畫得夠像，就能把一個人留在紙上。」<br>
+      「後來才知道，真正會消失的東西，是眼神，還有靠得太近的距離。」</p>
+
+      <p>他沒有看你，像是在對風說話。<br>
+      可你知道，那句話說給你聽。</p>
+
+      <p><strong>瑠姬：</strong><br>
+      「人在面對情感，答案有時候，比不上反應來得真實。」<br>
+      「所以我不看妳的嘴，而是看妳的眼睛。」</p>
+
+      <p>一道雲遮住了太陽，光線斑駁地灑在他身上。<br>
+      他終於轉過來看你，語氣低沉、冷靜，卻像一道直線刺進心臟。</p>
+
+      <p><strong>瑠姬：</strong><br>
+      「我不想成為妳好感名單裡的其中一個可能。」<br>
+      「我一向不擅長等待，所以只問一次——」<br>
+      「我有沒有讓妳心動過？」</p>
+
+      <p>他站在光裡，金髮輕動，眼神不容逃避。<br>
+      這不是試探，而是他習慣用來確認世界是否清晰的方式。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.（靜靜看著他和自己縮短的距離，心跳卻騙不了自己）</button>
+      <button onclick="next()">B. 現在好像是我無處可躲了</button>
+      <button onclick="next()">C.（逃避視線）「我要走了。」</button>
+      <button onclick="next()">D. 如果我說有呢</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'rukiscene4.html';
+    }
+  </script>
+</body>
+</html>

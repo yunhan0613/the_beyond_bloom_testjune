@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene4｜冠軍與告白</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f9f9f9;
+      padding: 2em;
+      line-height: 1.8;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+    .dialogue {
+      margin-bottom: 1.5em;
+    }
+    .ending {
+      font-weight: bold;
+      color: #1e3a8a;
+      background-color: #e0f2fe;
+      padding: 1em;
+      border-radius: 10px;
+      margin-top: 2em;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scene-title">
+      # Scene4｜冠軍與告白
+    </div>
+
+    <div class="dialogue">
+      <p>空手道大賽結束，他舉起獎盃的瞬間，第一眼就在人群裡找你。</p>
+      <p>傍晚，他主動來到你身邊，手上包著還沒痊癒的繃帶，卻笑得乾淨而耀眼。</p>
+      <p><strong>碧海：</strong><br>
+      「我做到了，真的做到了……現在，我可以說了。」</p>
+    </div>
+
+    <div id="ending" class="ending"></div>
+  </div>
+
+  <script>
+    const endings = [
+      "「我知道我不夠會說話，但我不想讓妳再懷疑一次。」\n「我喜歡妳，這句話沒有破綻，也不需要解釋。」",
+      "「如果我這樣拼命，是因為我希望——在妳眼裡，我也可以發光。」\n「我喜歡妳。從妳哭的那一刻起，我就更確定了。」",
+      "「我一直記得，妳幫我上藥時的手很溫柔。」\n「那時我就想好了。如果我贏了，我要第一個說喜歡妳。」",
+      "「這個冠軍不是證明自己，是為了讓妳相信我不會再逃避。」\n「我喜歡妳。就算會無疾而終，我也想一直留在妳身邊。」"
+    ];
+
+    // 隨機選擇一段告白
+    const random = Math.floor(Math.random() * endings.length);
+    document.getElementById('ending').innerText = endings[random];
+
+    // 禁止返回上一頁（可選）
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      history.go(1);
+    };
+  </script>
+</body>
+</html>

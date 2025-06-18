@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene2｜受傷的理由</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f9f9f9;
+      padding: 2em;
+      line-height: 1.8;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+    .dialogue {
+      margin-bottom: 1.5em;
+    }
+    .choice {
+      margin: 1em 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .choice button {
+      margin: 0.4em 0;
+      padding: 0.9em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #000000;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .choice button:hover {
+      background-color: #333333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scene-title">
+      # Scene2｜受傷的理由
+    </div>
+
+    <div class="dialogue">
+      <p>你幫他坐下，替他上藥。他一開始抗拒，後來卻沉默了。<br>
+      教室的燈光柔和，他低著頭，像是終於卸下了防備。</p>
+
+      <p><strong>碧海：</strong><br>
+      「我知道妳會擔心，所以才不說。」<br>
+      「我不是不在乎妳，是太在乎了……才不敢來打擾。」</p>
+
+      <p>他抬起眼，終於直視你，語氣低沉卻誠懇——</p>
+
+      <p><strong>碧海：</strong><br>
+      「妳以為我冷漠……那一瞬間，我真的很怕妳會走開。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A. 我沒走，只是被你推遠了。</button>
+      <button onclick="next()">B. 如果我哭了，是不是代表我也很在乎你？</button>
+      <button onclick="next()">C. 下次不准再一個人撐著了。</button>
+      <button onclick="next()">D. 我可以陪你一起熬，不是只能被你保護。</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'skyscene3.html';
+    }
+  </script>
+</body>
+</html>

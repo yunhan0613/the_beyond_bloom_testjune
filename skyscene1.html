@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene1｜夜練之下</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      position: relative;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('skyscene1.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.7) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #000000;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #ffffff;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #f0f0f0;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #111111;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #333333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="sky_avatar.jpg" alt="Sky" class="avatar">
+
+    <div class="scene-title">
+      # Scene1｜夜練之下
+    </div>
+
+    <div class="dialogue">
+      <p>傍晚的操場只剩下一個身影，<br>
+      金城碧海正對著沙袋一記記踢出，汗水濕透衣襬，動作卻依舊一絲不苟。<br>
+      他沒注意到你在遠處站了很久，直到一個踉蹌，他的手悄悄按住了膝蓋。</p>
+
+      <p><strong>碧海：</strong><br>
+      「……你怎麼來了？」<br>
+      「我不是叫你專心準備考試嗎？」</p>
+
+      <p>他語氣沒有責備，卻故意別開了眼，不讓你看見他紅腫的手腕。<br>
+      你想開口問他傷勢，卻被他搶先一步打斷——</p>
+
+      <p><strong>碧海：</strong><br>
+      「沒事，我只是……不想輸得太難看。」<br>
+      「如果能堂堂正正地站在妳面前，就不會讓妳失望。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A. 你可以輸比賽，但不能騙我。</button>
+      <button onclick="next()">B. 對我而言，你一直都是堂堂正正。</button>
+      <button onclick="next()">C. 你每次都這樣，一個人扛全部。</button>
+      <button onclick="next()">D. 這不是堂堂正正，這是傻。</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'skyscene2.html';
+    }
+  </script>
+</body>
+</html>

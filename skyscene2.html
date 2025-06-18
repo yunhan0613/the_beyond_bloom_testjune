@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene2｜受傷的理由</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      position: relative;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('skyscene2.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #000000;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #ffffff;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #f0f0f0;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #111111;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #333333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="sky_avatar.jpg" alt="Sky" class="avatar">
+
+    <div class="scene-title">
+      # Scene2｜受傷的理由
+    </div>
+
+    <div class="dialogue">
+      <p>你幫他坐下，替他上藥。他一開始抗拒，後來卻沉默了。<br>
+      教室的燈光柔和，他低著頭，像是終於卸下了防備。</p>
+
+      <p><strong>碧海：</strong><br>
+      「我知道妳會擔心，所以才不說。」<br>
+      「我不是不在乎妳，是太在乎了……才不敢來打擾。」</p>
+
+      <p>他抬起眼，終於直視你，語氣低沉卻誠懇——</p>
+
+      <p><strong>碧海：</strong><br>
+      「妳以為我冷漠……那一瞬間，我真的很怕妳會走開。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A. 我沒走，只是被你推遠了。</button>
+      <button onclick="next()">B. 如果我哭了，是不是代表我也很在乎你？</button>
+      <button onclick="next()">C. 下次不准再一個人撐著了。</button>
+      <button onclick="next()">D. 我可以陪你一起熬，不是只能被你保護。</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'skyscene3.html';
+    }
+  </script>
+</body>
+</html>

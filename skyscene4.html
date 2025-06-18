@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene4｜冠軍與告白</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('skyscene4.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #000000;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #ffffff;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #f0f0f0;
+    }
+
+    .confession {
+      margin-top: 2em;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #d4d4d4;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="sky_avatar.jpg" alt="Sky" class="avatar">
+
+    <div class="scene-title">
+      # Scene4｜冠軍與告白
+    </div>
+
+    <div class="dialogue">
+      <p>空手道大賽結束，他舉起獎盃的瞬間，第一眼就在人群裡找你。</p>
+      <p>傍晚，他主動來到你身邊，手上包著還沒痊癒的繃帶，卻笑得乾淨而耀眼。</p>
+
+      <p><strong>碧海：</strong><br>
+      「我做到了，真的做到了……現在，我可以說了。」</p>
+
+      <p class="confession" id="randomConfession"></p>
+    </div>
+
+    <script>
+      const endings = [
+        "碧海：\n「我知道我不夠會說話，但我不想讓妳再懷疑一次。」\n「我喜歡妳，這句話沒有破綻，也不需要解釋。」",
+        "碧海：\n「如果我這樣拼命，是因為我希望——在妳眼裡，我也可以發光。」\n「我喜歡妳。從妳哭的那一刻起，我就更確定了。」",
+        "碧海：\n「我一直記得，妳幫我上藥時的手很溫柔。」\n「那時我就想好了。如果我贏了，我要第一個說喜歡妳。」",
+        "碧海：\n「這個冠軍不是證明自己，是為了讓妳相信我不會再逃避。」\n「我喜歡妳。就算會無疾而終，我也想一直留在妳身邊。」"
+      ];
+      const selected = Math.floor(Math.random() * endings.length);
+      document.getElementById("randomConfession").textContent = endings[selected];
+    </script>
+  </div>
+</body>
+</html>

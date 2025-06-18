@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene3｜眼淚與擁抱</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      position: relative;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('skyscene3.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.7) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #000000;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #ffffff;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #f0f0f0;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #111111;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #333333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="sky_avatar.jpg" alt="Sky" class="avatar">
+
+    <div class="scene-title">
+      # Scene3｜眼淚與擁抱
+    </div>
+
+    <div class="dialogue">
+      <p>聽著他的聲音越來越小，你彷彿想起了連日來的冷落。<br>
+      你低著頭，毫無防備之際，冰涼從臉頰滑落。你想擦掉眼淚，卻怎麼也止不住。</p>
+
+      <p>他怔了一下，隨即伸手抱住你。<br>
+      沒有多餘的話語，只有緊緊的懷抱。</p>
+
+      <p><strong>碧海：</strong><br>
+      「對不起，讓妳哭了。」<br>
+      「我希望，到我真正說出口的那一刻，是我能讓你驕傲的時候。」</p>
+
+      <p>他輕輕抱著你，像是把所有沒說出口的情緒都收進這個擁抱裡。</p>
+
+      <p><strong>碧海：</strong><br>
+      「等我。比完賽之後……我有話要說。」</p>
+
+      <p>你在他懷裡點頭，風從窗外吹進來，把他的聲音送進你耳裡——</p>
+
+      <p><strong>碧海：</strong><br>
+      「我想讓妳喜歡的那個我，是不躲不退，也不逃避的我。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A. 我喜歡的你，那就是全部的你。</button>
+      <button onclick="next()">B. 那就站在我面前，別再退後了。</button>
+      <button onclick="next()">C. 說出這句話的你，已經夠讓人心動了。</button>
+      <button onclick="next()">D. 我會記住你說這句話的樣子，很久很久。</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'skyscene4.html';
+    }
+  </script>
+</body>
+</html>

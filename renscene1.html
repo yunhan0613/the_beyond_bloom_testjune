@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene1｜練習室的鏡光</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('renscene1.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #132f69;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #132f69;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #2a3e6d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="ren_avatar.jpg" alt="Ren" class="avatar">
+
+    <div class="scene-title">
+      # Scene1｜練習室的鏡光
+    </div>
+
+    <div class="dialogue">
+      <p>校慶晚會將近，練習室的燈從放學後就沒熄過。<br>
+      鏡面反映出來來去去的人影，每一道都閃爍著汗水與重複的腳步。</p>
+
+      <p>你站在舞蹈教室角落，總覺得自己的身影，與其他人的節奏隔了一拍。</p>
+
+      <p>他站在正中央，頭髮有點濕，背挺得筆直。從你加入熱舞社那天起，他就總是這樣站著——<br>
+      像一套無須多言的標準。他的動作銳利、節奏準確，任何人只要一靠近，就會自覺收斂。</p>
+
+      <p>你沒想過，自己能站在他的視線裡。甚至一度覺得，這場晚會你或許不該上台。</p>
+
+      <p><strong>蓮：</strong><br>
+      「你剛才那個轉身，慢了一拍。」</p>
+
+      <p>他忽然出聲，語氣很淡，卻直接點到了你想掩飾的地方。</p>
+
+      <p><strong>蓮：</strong><br>
+      「不是節奏的問題，是……你在猶豫。」</p>
+
+      <p>他沒責備你，只是緩緩走近。站在你背後，看著鏡中的你。</p>
+
+      <p><strong>蓮：</strong><br>
+      「從這個角度看，其實你做得比你想像中好很多。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「你這樣看著，我更不知道自己該怎麼動了。」</button>
+      <button onclick="next()">B.「你不會對每個人……都說這種話吧。」</button>
+      <button onclick="next()">C.「我以為你從來沒看過我跳。」</button>
+      <button onclick="next()">D.「那我現在……還像是在場上的人嗎？」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'renscene2.html';
+    }
+  </script>
+</body>
+</html>

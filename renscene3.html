@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene3｜燈未熄，練習未完</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('renscene3.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #132f69;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #132f69;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #1c3f8f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="ren_avatar.jpg" alt="Ren" class="avatar">
+
+    <div class="scene-title">
+      # Scene3｜燈未熄，練習未完
+    </div>
+
+    <div class="dialogue">
+      <p>正式練習早已結束，社團群組裡訊息此起彼落，大家都在討論明天走位和服裝。<br>
+      你卻留在練習室，沒有告訴任何人，只想再把那段轉身重練一次。</p>
+
+      <p>鏡中的你顯得有點孤單，卻又專注得不像平常。<br>
+      你反覆確認音樂、數拍子、修正重心，直到播放鍵再也按不下去。</p>
+
+      <p>就在你打算收拾的時候，門開了。</p>
+
+      <p>是他。</p>
+
+      <p>川尻蓮站在門邊，沒有說話，只是靜靜地看你。</p>
+
+      <p>你們對視的瞬間，你忽然想起今天你出錯的位置，也想起他剛才靠近時說過的那句話——<br>
+      「我在這，不會讓你掉拍。」</p>
+
+      <p><strong>蓮：</strong><br>
+      「你沒跟他們一起走？」</p>
+
+      <p>他語氣平穩，像只是在詢問，但你知道他看見了全部。</p>
+
+      <p>他走進來，站在你身後的角落。<br>
+      與剛才不同，他沒有再伸手，只說：</p>
+
+      <p><strong>蓮：</strong><br>
+      「我原本只是想回來拿東西……但你這樣站在這裡，讓人不太想離開。」<br>
+      「……但你剛剛跳的那段，比之前準很多。」</p>
+
+      <p>他的語氣輕得像怕驚動什麼，而你在那片沉默裡，終於發現——<br>
+      他不是站在你身後，而是早就站在你這邊。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「大概是……我希望自己在你眼裡，是最好的樣子吧。」</button>
+      <button onclick="next()">B.「我只是想努力跟上你的節奏。」</button>
+      <button onclick="next()">C.「我其實也不太確定，只是……想再跳一次給你看。」</button>
+      <button onclick="next()">D.「那你願意再陪我練一下嗎？」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'renscene4.html';
+    }
+  </script>
+</body>
+</html>

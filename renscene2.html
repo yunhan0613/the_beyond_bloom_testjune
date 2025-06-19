@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene2｜錯拍與靠近</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('renscene2.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #132f69;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #132f69;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #0f234e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="ren_avatar.jpg" alt="REN" class="avatar">
+
+    <div class="scene-title">
+      # Scene2｜錯拍與靠近
+    </div>
+
+    <div class="dialogue">
+      <p>他只是輕拍了自己的背，彷彿一切都只是你的錯覺，又像是一種專屬於你的安心。</p>
+
+      <p>音樂聲再次響起，你回到隊形中站定，心跳卻亂了節拍。</p>
+
+      <p>在鏡中，你看見他低頭按了播放鍵，站到角落觀察每一個人的動作。</p>
+
+      <p>當旋律走到那段你最容易錯的拍點時，你的腳步再次略顯遲疑。</p>
+
+      <p>音樂沒停，卻忽然被他走近的腳步覆蓋。</p>
+
+      <p>他站到你身後，手輕輕扶上你的手臂與腰線，像是想重新幫你對準那個轉身。</p>
+
+      <p><strong>蓮：</strong><br>
+      「動作可以慢一點，沒有人說你一定要跟得上最快的節奏。」</p>
+
+      <p>他的聲音很近，氣息微弱地掠過你耳後。他的指尖沒多停留，卻留下了溫度。</p>
+
+      <p><strong>蓮：</strong><br>
+      「真正的合拍，是要等對方走近，而不是追上去。」</p>
+
+      <p>他後退一步，看著你站定位置，像是在確認你準備好了。</p>
+
+      <p><strong>蓮：</strong><br>
+      「這一段再來一次。看著我，我不會讓你掉拍。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「我以為你只看得到鏡子裡的人⋯⋯」</button>
+      <button onclick="next()">B.「原來你也是會說這種話的人啊⋯⋯」</button>
+      <button onclick="next()">C.「剛才你是在教我動作嗎⋯⋯？」</button>
+      <button onclick="next()">D.「你平常也會這樣親自教別人嗎？」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'renscene3.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene4｜舞台落幕，他沒有退場</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('renscene4.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.8) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #132f69;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .confession {
+      margin-top: 2em;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #555;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="ren_avatar.jpg" alt="Ren" class="avatar">
+
+    <div class="scene-title">
+      # Scene4｜舞台落幕，他沒有退場
+    </div>
+
+    <div class="dialogue">
+      <p>彷彿和他的深夜練習恍如昨日，<br>
+      準備的日子太快翻頁，像是說不完的心事，隨風飄散，卻什麼都沒來得及抓住。</p>
+
+      <p>校慶晚會的表演在他的操刀下，果不其然獲得了滿堂彩。<br>
+      大家又再一次見證了他精湛華麗的舞技，也不禁佩服他的執導能力。<br>
+      台上的燈光絢爛得自己一時模糊了眼光——<br>
+      在光影之下重合的，是那樣閃閃發亮的他。</p>
+
+      <p>晚會落幕時，燈光比排練時柔和了些。<br>
+      歡呼聲還留在空氣裡，你站在側舞台，還沒從餘音中抽離。</p>
+
+      <p>川尻蓮剛從舞台中央走下來，額上有汗，腳步卻一如往常冷靜。<br>
+      他看見你，沒有說話，只是停在你面前，像在等待什麼。</p>
+
+      <p>你以為他會照舊走過、點個頭，就像他一直以來那樣保持距離。<br>
+      但這次，他卻伸出手，緩緩地把你的手拉起來，<br>
+      像要確認什麼是否真實存在——而你沒有抽回。</p>
+
+      <p>他看著你許久，然後低聲開口，像終於鬆開什麼繃緊很久的東西：</p>
+
+      <p><strong>「你今天跳得很好。真的。」</strong></p>
+
+      <p>他停了一下，眼神沒移開。</p>
+
+      <p><strong>「……我不是因為社長的責任才留下來教你的。」</strong><br>
+      <strong>「我一直知道你會努力，也知道你會站上這個舞台。」</strong></p>
+
+      <p>他垂下眼，像是在斟酌什麼。然後抬起頭，終於說出那句話：</p>
+
+      <p><strong>「但我沒想到——你會讓我這麼在意。」</strong></p>
+
+      <p>他說得很輕，像怕說太快就破壞了什麼。</p>
+
+      <p>你還沒來得及反應，他就笑了一下，自嘲似的補了一句：</p>
+
+      <p><strong>「舞台落幕了，我才敢講這種話，真不像我。」</strong></p>
+
+      <p>然後他鬆開手，往後退了一步，像給你留下選擇的空間。</p>
+
+      <p><strong>他低聲說道——</strong></p>
+
+      <p class="confession" id="confessionText"></p>
+    </div>
+
+    <script>
+      const endings = [
+        "「我一直是獨自練舞的人……但這次，想為兩個人的舞台，留一盞燈。」",
+        "「你總是看著我跳舞，其實我也一直……在等你走進我的節奏。」",
+        "「我沒想過會為誰調整腳步。\n但你的存在，就像拍子落點一樣，早就紮根在我身體裡了。」",
+        "「如果下一次還能一起站上舞台——\n我不會只教你舞步，我會牽你的手，一起跳下去。」"
+      ];
+      const selected = Math.floor(Math.random() * endings.length);
+      document.getElementById("confessionText").textContent = endings[selected];
+    </script>
+  </div>
+</body>
+</html>

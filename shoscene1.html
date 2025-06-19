@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>☕Scene1｜教室的清晨光</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('shoscene1.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #9dd59a;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #9dd59a;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #86be85;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="sho_avatar.jpg" alt="Sho" class="avatar">
+
+    <div class="scene-title">
+      ☕Scene1｜教室的清晨光
+    </div>
+
+    <div class="dialogue">
+      <p>天還未亮透，校園像一座尚未醒來的城市。<br>
+      你踩進走廊時，腳步聲在空蕩教學樓裡格外清晰。<p>
+      <p>空氣涼得有些刺膚，卻又帶著剛洗過黑板的粉筆味。</p>
+
+      <p>教室門沒鎖，推開那一瞬，有種錯覺像是闖進誰的日常。</p>
+
+      <p>與那城早已坐在窗邊，他的影子在微光裡與課本疊成一塊。
+      <p>左手習慣性托著臉，右手翻頁的節奏有點快，像是早就預料你今天會遲到。</p>
+
+      <p>桌上多了一杯紙杯咖啡，還冒著熱氣，另一杯則放在你的座位上。</p>
+
+      <p><strong>獎：</strong><br>「五分遲到，比昨天晚一點。」</p>
+
+      <p>語氣沒責備，甚至帶著一點熟悉的嘲諷意味。他沒抬頭，只推了推那杯熱咖啡。</p>
+
+      <p><strong>獎：</strong><br>「下次要不要直接讓我來叫你起床？」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「那你會等嗎？如果我真的不起來的話。」</button>
+      <button onclick="next()">B.「今天的咖啡……好像比昨天苦一點。」</button>
+      <button onclick="next()">C.「你每天都這麼早，是刻意在等我嗎？」</button>
+      <button onclick="next()">D.「所以你到底幾點起來準備這些的啊……太不合理了吧。」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'shoscene2.html';
+    }
+  </script>
+</body>
+</html>

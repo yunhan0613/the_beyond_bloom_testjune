@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene3｜期末前的咖啡與空白頁</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('shoscene3.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #9dd59a;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #9dd59a;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #82be86;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="sho_avatar.jpg" alt="Sho" class="avatar">
+
+    <div class="scene-title">
+      # Scene3｜期末前的咖啡與空白頁
+    </div>
+
+    <div class="dialogue">
+      <p>最後一次晨讀，天空還灰著。教室門被推開時，與那城已坐在那裡，像過去每一個早晨。</p>
+
+      <p>不同的是，今天桌上只有一杯咖啡——你那杯，被他捧在手裡，像是不知該不該放下。<br>
+他沒說早安，也沒催你翻開書，只靜靜遞過那杯紙杯，視線卻落在桌面。</p>
+
+      <p><strong>獎：</strong><br>「我昨天想了一整晚。」<br>
+他語速比平常慢了一些，不確定是因為緊張，還是因為太熟悉你會聽見什麼。</p>
+
+      <p><strong>獎：</strong><br>「再過幾天就考完了吧，照這樣下去……你應該會贏。」<br>
+      他打開手帳。那本總是密密麻麻寫滿代辦事項的本子，今天那一頁，什麼都沒有。</p>
+
+      <p><strong>獎：</strong><br>「原本是要寫計劃的，但寫不下去。」<br>
+
+      他語氣平淡，卻沒有笑。</p>
+
+      <p><strong>獎：</strong><br>「這是第一次，我發現，有些事情不是安排得來的。」</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「那就別寫了，這天用記的，比安排還牢。」</button>
+      <button onclick="next()">B.「沒寫在本子上，那麼是寫在別的地方了嗎？」</button>
+      <button onclick="next()">C.「計劃之外的事，有時候也會剛剛好。」</button>
+      <button onclick="next()">D.「我可以幫你補上啊，就寫——今天把咖啡換成兩杯。」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'shoscene4.html';
+    }
+  </script>
+</body>
+</html>

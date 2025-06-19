@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene4｜告白那天，他沒再寫手帳</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('shoscene4.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.8) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #9dd69a;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .confession {
+      margin-top: 2em;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #555;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="sho_avatar.jpg" alt="Sho" class="avatar">
+
+    <div class="scene-title">      
+      #☕ Scene4｜告白那天，他沒再寫手帳
+    </div>
+
+
+      <div class="dialogue">
+        他的話語就這樣在耳邊延盪。<br><br>
+        期末考結束那天的清晨，天氣晴朗。<br>
+        照理來說，沒有人會再提早到校——沒有早自習，沒有課表，也不再有考前的壓力。<br><br>
+        但你還是像往常一樣，推開了那扇教室的門。<br>
+        早到這件事，早已從「堅持」變成了某種無聲的習慣。<br><br>
+        與那城坐在窗邊，像等候一場預知的光線。<br>
+        他的桌上，擺著兩杯咖啡，還有那本手帳——今天一樣沒有寫字。<br><br>
+        他在賭。<br>
+        賭這學期的最後一個清晨，兩個人是否還會在同樣的時刻出現。<br>
+        賭你早起不是為了補習，而是為了他。<br>
+        這是他第一次沒有計劃、第一次不夠理性——也是第一次，有期待與害怕同時存在的早晨。<br><br>
+        你出現的那一刻，他的手從咖啡杯上收回，呼吸輕得像緩緩翻頁。<br><br>
+        <strong>獎：</strong><br>
+        「今天的願望，要兌現了吧？」<br><br>
+        他聲音不大，卻比平常多了一層不確定。<br>
+        你沒開口，他也沒催促，只是把那本手帳推近了一點。<br><br>
+        <strong>獎：</strong><br>
+        「其實我早就知道你會贏。」<br><br>
+        他像是在說笑，眼神卻極其認真。<br>
+        你注意到他手邊的咖啡杯有兩個——你那杯，還是你習慣的配方。<br><br>
+        <strong>獎：</strong><br>
+        「我原本以為，我可以一直照順序安排一切。」<br>
+        「但後來才發現，從第一次叫你起床開始，整件事就不在計劃裡了。」<br><br>
+        他終於看向你，像是做了一場長久的心理預演，卻仍然緊張。<br><br>
+        <strong>獎：</strong><br>
+        「所以這次，不寫在手帳上了。」<br>
+      </div>
+
+      <div class="ending" id="ending-text"></div>
+    </div>
+  </div>
+
+  <script>
+    const endings = [
+      "「我不是為了教你才來這麼早，是為了能多見你一會兒。」",
+      "「你許願的時候，我其實也偷偷許了一個——希望你願意留下來。」",
+      "「我一直以為自己很會安排時間，但遇見你之後，我開始想放棄那個習慣。」",
+      "「這是第一天，我沒有安排別的事，只想聽你說，你想要的願望是我。」"
+    ];
+    const selected = endings[Math.floor(Math.random() * endings.length)];
+    document.getElementById('ending-text').textContent = selected;
+  </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene2｜願望的約定</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('shoscene2.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #9dd59a;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #9dd59a;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #83c387;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="sho_avatar.jpg" alt="Sho" class="avatar">
+
+    <div class="scene-title">
+      # Scene2｜願望的約定
+    </div>
+
+    <div class="dialogue">
+      <p>考前的教室難得安靜。早晨七點的陽光被窗簾擋住了一半，斜斜地落在黑板邊緣。<br>
+      你們像往常一樣坐在前排，習慣性各自準備、沉默翻頁，只在某題卡住時低聲詢問。</p>
+
+      <p>與那城手上的咖啡很快就見底，不見他平常習慣拿著的手帳，<br>
+     但手邊倒是多了一本嶄新的便條本。第一頁乾淨得不像他。<br>
+      你盯著那頁看了太久，連筆沒寫完的聲音都被他察覺。</p>
+
+      <p><strong>獎：</strong><br>
+      「……在想什麼？」</p>
+
+      <p>你抬頭時，他已將便條本闔上。</p>
+
+      <p><strong>獎：</strong><br>
+      「考完就沒早自習了，你在想這個吧。」</p>
+
+      <p>你沒否認。晨間教室的光變得溫軟，像某種即將結束的習慣，悄無聲息。</p>
+
+      <p><strong>獎：</strong><br>
+      「那這樣好了。」<br>
+      他難得放下筆，語氣平穩卻略顯緩慢</p>
+
+      <p><strong>獎：</strong><br>
+      「我們打個賭。」<br>
+      「這次期末你達標，我就答應你一個願望。」</p>
+
+      <p>他說得像是一場普通的約定，可你總覺得他早已有了答案，只是選擇裝作沒有。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「說好了就不能反悔！」</button>
+      <button onclick="next()">B.「你都還沒聽我的願望就答應我嗎」</button>
+      <button onclick="next()">C.「那你要小心，我的願望不會太簡單喔」</button>
+      <button onclick="next()">D.「這麼認真地陪我讀書，原來只是不想輸賭注啊？」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'shoscene3.html';
+    }
+  </script>
+</body>
+</html>

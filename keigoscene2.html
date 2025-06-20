@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene2｜未署名的畫作</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('keigoscene2.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.75) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #a98b73;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .choice {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .choice button {
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      border: none;
+      border-radius: 16px;
+      background-color: #a98b73;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice button:hover {
+      background-color: #93785e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="keigo_avatar.jpg" alt="Keigo" class="avatar">
+
+    <div class="scene-title">
+      # Scene2｜未署名的畫作
+    </div>
+
+    <div class="dialogue">
+      <p>展覽佈置的現場午後光線透進來，照在純白牆面與未掛起的作品上。</p>
+      <p>你正調整相機的焦距，景瑚則坐在一旁等候下一次拍攝。</p>
+      <p>他平時總是話多又愛鬧，但這會兒安靜得讓你一時錯愕。</p>
+      <p>調整鏡頭的過程中，你的視線被牆邊的一幅畫吸引。<br>
+      畫面以柔和的筆觸描繪出一個身影——<br>
+      半邊側臉藏在窗邊陰影中，眉眼微低，卻像在等待誰。</p>
+      <p>畫作沒有署名，卻不自覺地讓你駐足。</p>
+      <p>你不自覺地盯著畫出神，幾乎忘了自己正在工作。</p>
+      <p>他側過身，看見你停滯的模樣，嘴角微彎，像是想說什麼。<br>
+      那個笑意一閃即逝，來不及被你捕捉。</p>
+      <p><strong>景瑚：</strong><br>「你會喜歡這幅畫嗎？」</p>
+      <p>他問得像在閒聊，語氣卻不輕挑。</p>
+      <p><strong>景瑚：</strong><br>「我聽說作者沒留下名字。不過，我第一次看到的時候，就覺得他畫的不是誰，而是“某個感覺”。」</p>
+      <p>他頓了一下，像是在等你回應，又像是在等你發現什麼。</p>
+    </div>
+
+    <div class="choice">
+      <button onclick="next()">A.「畫裡那個人……有一種想開口卻忍住的神情。」</button>
+      <button onclick="next()">B.「說不上來，只是……好像有點熟悉。」</button>
+      <button onclick="next()">C.「我在想，畫裡的人在等的是什麼呢」</button>
+      <button onclick="next()">D.「如果是你畫的，你覺得……他的表情是什麼？」</button>
+    </div>
+  </div>
+
+  <script>
+    function next() {
+      location.href = 'keigoscene3.html';
+    }
+  </script>
+</body>
+</html>

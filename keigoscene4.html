@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene4｜畫中未說的告白</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 3em 1em;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('keigoscene4.webp') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.8) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      padding: 2.5em;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #a98b73;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 1em;
+    }
+
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1.2em;
+    }
+
+    .dialogue p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .confession {
+      margin-top: 2em;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #555;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="keigo_avatar.jpg" alt="Keigo" class="avatar">
+
+    <div class="scene-title">
+      # Scene4｜畫中未說的告白
+    </div>
+
+    <div class="dialogue">
+      <p>展覽結束後的人潮逐漸散去，夕陽餘光穿過長廊的玻璃灑在地面，光影拉得很長。</p>
+      <p>你正準備收起器材，轉過身，卻發現他站在那幅畫前，像是還不願離開。<br>
+      展區只剩下你們兩人，他沒有開口，直到你靠近，他才緩緩說：</p>
+      <p>「我小時候不太會畫人臉，怎麼畫都不像。」<br>
+      他低頭笑了笑，「我媽還開玩笑說，是不是我沒看清楚那個人啊。」</p>
+      <p>他側過頭，望向你，眼神安靜卻認真。</p>
+      <p><strong>景瑚：</strong><br>
+      「但這幅畫，我卻一直知道……我要畫什麼樣的眼神。」<br>
+      「是我在練習時，不小心瞥見你拍照的樣子——<br>
+      像是什麼也沒說，但其實，什麼都知道。」</p>
+      <p>他的聲音很輕，像是在小心地翻開什麼心事。</p>
+      <p><strong>景瑚：</strong><br>
+      「所以我才想畫那樣的眼神啊。不是等著被看見，而是……從來都在看著你。」</p>
+      <p>他望著你，嘴角微微揚起，終於像是等到可以說出口的時刻。<br>
+      低聲說道：</p>
+      <p class="confession" id="confessionText"></p>
+    </div>
+
+    <script>
+      const endings = [
+        "「我總是在畫裡藏著心情，但這次……我想把它說出來。」",
+        "「我以為畫筆能替我說完的事，結果還是得親口告訴你才行。」",
+        "「我不確定你什麼時候發現的，但我希望你知道，我從來都只在畫你。」",
+        "「喜歡跟畫一樣，無法輕易被說出口，卻總能被看見，那麼這次，我想我是終於可以說出口了。」"
+      ];
+      const selected = Math.floor(Math.random() * endings.length);
+      document.getElementById("confessionText").textContent =
+        endings[selected] + "\n\n若你願意，這幅畫會一直留在那裡，就像喜歡，所以只想永遠將你畫在心裡。";
+    </script>
+  </div>
+</body>
+</html>

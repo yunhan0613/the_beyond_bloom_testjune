@@ -78,6 +78,24 @@
       color: #1e3a8a;
       white-space: pre-line;
     }
+    .back-home {
+  margin-top: 40px;
+  text-align: center;
+}
+.back-home a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #b54e5c;
+  padding: 8px 16px;
+  border: 1px solid #b54e5c;
+  border-radius: 6px;
+  background-color: #fff5f5;
+  transition: all 0.2s ease;
+}
+.back-home a:hover {
+  background-color: #ffecec;
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
@@ -116,5 +134,8 @@
     const random = Math.floor(Math.random() * endings.length);
     document.getElementById("randomConfession").textContent = `純喜（語音）：\n${endings[random]}`;
   </script>
+<div class="back-home">
+  <a href="index.html">← 返回首頁</a>
+</div>
 </body>
 </html>
